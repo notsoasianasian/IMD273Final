@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 331216366}
   - component: {fileID: 331216365}
   - component: {fileID: 331216369}
+  - component: {fileID: 331216370}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -786,6 +787,18 @@ Skybox:
   m_GameObject: {fileID: 331216364}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 0c56b35a6d7bad544a5b576592b6e51e, type: 2}
+--- !u!114 &331216370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331216364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e7ac19ca4af22af4aa7d02c75b6c5426, type: 2}
 --- !u!1 &551384991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2843,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -10, y: 0}
-  m_SizeDelta: {x: 450, y: 300}
+  m_SizeDelta: {x: 450, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709391877
 MonoBehaviour:
@@ -2878,10 +2891,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "-w = walk forward\n-s = walk backward\n-a = strafe left\n-d = strafe left\n-Apples
-    = 20 health\n-Enemy's do 5 damage per hit\n-to access pause menu in play\n press
-    Escape key.\n\n(note)\nwhile in the starting area player \nwill lose 5 health
-    per second\nuntil second camp is reached."
+  m_Text: "-w = walk forward\n-s = walk backward\n-a = strafe left\n-d = strafe left\n-f
+    = toggle Flashlight\n-e = pick up items\n-Apples = 20 health\n-Enemy's do 5 damage
+    per hit\n-to access pause menu in play\n press Escape key.\n\n(note)\nwhile in
+    the starting area player \nwill lose 5 health per second\nuntil second camp is
+    reached."
 --- !u!222 &1709391879
 CanvasRenderer:
   m_ObjectHideFlags: 0
