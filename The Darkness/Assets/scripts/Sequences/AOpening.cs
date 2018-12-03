@@ -21,8 +21,10 @@ public class AOpening : MonoBehaviour {
 		FadeScreenIn.SetActive (false);
 		TextBox.GetComponent<Text> ().text = "Where am I?";
 		yield return new WaitForSeconds (2);
-		TextBox.GetComponent<Text> ().text = "";
-		ThePlayer.GetComponent<FirstPersonController> ().enabled = true;
+		TextBox.GetComponent<Text> ().text = "My head is killing me.";
+        yield return new WaitForSeconds(2);
+        TextBox.GetComponent<Text>().text = "";
+        ThePlayer.GetComponent<FirstPersonController> ().enabled = true;
 	}
 	
 

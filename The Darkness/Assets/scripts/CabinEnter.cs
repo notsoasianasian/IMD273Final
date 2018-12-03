@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class CabinEnter : MonoBehaviour {
 
+    public GameObject LevelExit;
 
-	void onTriggerEnter(Collider other) {
+    void onTriggerEnter(Collider other) {
 
-		if (other.tag == "Player") {
-		
-			SceneManager.LoadScene("YouSurvived");
-		}
+        SceneManager.LoadScene("YouHaveDied");
+        print("you won");
+      
+    }
 
-	}
 }

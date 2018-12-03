@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class BZJumpTrigger : MonoBehaviour {
 
-	public AudioSource JumpMusic;
-	public GameObject TheEnemy;
+    public AudioSource Bushes;
+    public AudioSource JumpMusic;
+    public GameObject TheZombie;
 
 
-	void OnTriggerEnter (){
+    void OnTriggerEnter (){
 	
 		GetComponent<BoxCollider> ().enabled = false;
-		JumpMusic.Play ();
-		TheEnemy.SetActive (true);
-		StartCoroutine (PlayJumpMusic ());
-	}
+        Bushes.Play();
+        TheZombie.SetActive(true);
+        JumpMusic.Play();
+        StartCoroutine (PlayJumpMusic ());
 
-	IEnumerator PlayJumpMusic()
+
+
+
+    }
+
+    IEnumerator PlayJumpMusic()
 	{
 		yield return new WaitForSeconds (0.4f);
 		JumpMusic.Play ();
