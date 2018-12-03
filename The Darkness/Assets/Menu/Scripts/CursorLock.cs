@@ -15,7 +15,7 @@ public class CursorLock : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.BeginVertical();
+       // GUILayout.BeginVertical();
         // Release cursor on escape keypress
         if (Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = wantedMode = CursorLockMode.None;
@@ -23,30 +23,30 @@ public class CursorLock : MonoBehaviour
         switch (Cursor.lockState)
         {
             case CursorLockMode.None:
-                GUILayout.Label("Cursor is normal");
-                if (GUILayout.Button("Lock cursor"))
-                    wantedMode = CursorLockMode.Locked;
-                if (GUILayout.Button("Confine cursor"))
-                    wantedMode = CursorLockMode.Confined;
-                break;
-            case CursorLockMode.Confined:
-                GUILayout.Label("Cursor is confined");
-                if (GUILayout.Button("Lock cursor"))
-                    wantedMode = CursorLockMode.Locked;
-                if (GUILayout.Button("Release cursor"))
-                    wantedMode = CursorLockMode.None;
-                break;
+            //    GUILayout.Label("Cursor is normal");
+                if (GUILayout.Button(""))
+                   wantedMode = CursorLockMode.Locked;
+                if (GUILayout.Button(""))
+                   wantedMode = CursorLockMode.Confined;
+             break;
+           case CursorLockMode.Confined:
+//   GUILayout.Label("Cursor is confined");
+            if (GUILayout.Button(""))
+                  wantedMode = CursorLockMode.Locked;
+               if (GUILayout.Button(""))
+                   wantedMode = CursorLockMode.None;
+               break;
             case CursorLockMode.Locked:
-                GUILayout.Label("Cursor is locked");
-                if (GUILayout.Button("Unlock cursor"))
-                    wantedMode = CursorLockMode.None;
-                if (GUILayout.Button("Confine cursor"))
-                    wantedMode = CursorLockMode.Confined;
-                break;
-        }
+               GUILayout.Label("");
+               if (GUILayout.Button(""))
+                   wantedMode = CursorLockMode.None;
+               if (GUILayout.Button(""))
+                   wantedMode = CursorLockMode.Confined;
+               break;
+      }
 
-        GUILayout.EndVertical();
+     //   GUILayout.EndVertical();
 
-        SetCursorState();
+      //  SetCursorState();
     }
 }
